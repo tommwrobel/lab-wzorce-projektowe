@@ -14,7 +14,7 @@ public class Application {
         final CommandBus commandBus = new CommandBus(
                 Map.of(OrderItemAddCommand.class, new OrderItemAddCommandHandler())
                 // TODO task1: add new command - OrderItemAddCommand(orderId, productId, quantity)
-        ));
+        );
         final OrderCreateCommand orderCreateCommand = new OrderCreateCommand(UUID.randomUUID().toString());
         commandBus.execute(orderCreateCommand);
     }
